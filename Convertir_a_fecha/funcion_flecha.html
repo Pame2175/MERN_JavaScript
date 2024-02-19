@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<body id="body">
+    <h1>My Boring Website</h1>
+    <p id="paragraph">
+        This website is boring, with very little CSS. 
+        However, we really just care about the javascript. 
+        For example, if you click <button id="button">this button</button>, the background of this paragraph tag will change to blue.
+    </p>
+    <p>We also have a <button id="alert">alert</button> button that will grab the text from the input below and show it in a popup.</p>
+    <div>
+        <input type="text" id="popup-input">
+    </div>
+    <p>
+        We just like random interactivity in the site, including a fun effect if you hover over <span id="hover-this">        <b>this.</b></span>
+    </p>
+    <p onmouseover="mouseOverFunction(this)">
+        Another task: This should be another feature. 
+        I want to click anywhere in this paragraph tag and I want to be able to change the background color to whatever is in this input: <input type="text"/>.
+    </p>
+    <script>
+        // Asignar un controlador de evento al hacer clic en el botón
+        document.getElementById("button").onclick = () => {
+            // Llamar a la función para establecer el color de fondo del párrafo en azul
+            setBackgroundColorById("paragraph", "blue");
+        };
+
+        // Asignar un controlador de evento al hacer clic en el botón de alerta
+        document.getElementById("alert").onclick = () => {
+            // Mostrar una alerta con el valor del campo de entrada
+            alert(document.getElementById("popup-input").value);
+        };
+
+        // Asignar un controlador de evento al pasar el mouse sobre el elemento
+        document.getElementById("hover-this").onmouseover = () => {
+            // Llamar a la función para establecer el color de fondo del cuerpo en rojo
+            setBackgroundColorById("body", "red");
+        };
+
+        // Asignar un controlador de evento al quitar el mouse del elemento
+        document.getElementById("hover-this").onmouseout = () => {
+            // Llamar a la función para establecer el color de fondo del cuerpo en blanco
+            setBackgroundColorById("body", "white");
+        };
+
+        // Función para obtener el valor de un elemento por su ID
+        const getValueFromId = id => document.getElementById(id).value;
+
+        // Función para establecer el color de fondo de un elemento por su ID
+        const setBackgroundColorById = (id, color) => {
+            // Obtener el elemento por su ID y establecer su estilo de fondo con el color proporcionado
+            document.getElementById(id).style = `background-color: ${color}`;
+        };
+
+        // Función para cambiar el color de fondo de un elemento al pasar el mouse sobre él
+        const mouseOverFunction = el => {
+            // Establecer el color de fondo del elemento en negro
+            el.style = "background-color: black";
+        };
+
+
+    </script>
+</body>
+</html>
+
