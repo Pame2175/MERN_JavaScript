@@ -55,3 +55,5 @@ superSensei.speakWisdom(); // Llama al método speakWisdom para mostrar un mensa
 superSensei.showStats(); // Muestra las estadísticas del Sensei después de hablar su sabiduría
 
 
+
+
