@@ -49,7 +49,7 @@ class Sensei extends Ninja {
     }
 }
 
-// Ejemplo de uso de la clase Sensei
+// Ejemplo de  la utilizacion de la clase Sensei
 const superSensei = new Sensei("Master Splinter");
 superSensei.speakWisdom(); // Llama al método speakWisdom para mostrar un mensaje de sabiduría y aumentar la salud
 superSensei.showStats(); // Muestra las estadísticas del Sensei después de hablar su sabiduría
